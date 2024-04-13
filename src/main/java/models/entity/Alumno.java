@@ -19,7 +19,6 @@ public class Alumno {
 	public void prePerseit() {
 		this.createAt = new Date();
 	}
-
 	public Long getId() {
 		return id;
 	}
