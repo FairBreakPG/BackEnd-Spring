@@ -1,12 +1,7 @@
 package models.entity;
 import java.util.Date;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.Table;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="alumnos")
@@ -19,6 +14,7 @@ public class Alumno {
 	private String email;
 	@Column(name = "create_at")
 	private Date createAt;
+	@Temporal(TemporalType.TIMESTAMP)
 	@PrePersist
 	public void prePerseit() {
 		this.createAt = new Date();
